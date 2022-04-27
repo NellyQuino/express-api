@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NellyQuino/express-api/issues"
   },
-  "homepage": "https://github.com/NellyQuino/express-api#readme"
+  "homepage": "https://github.com/NellyQuino/express-api#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
 }
