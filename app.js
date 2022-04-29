@@ -17,13 +17,21 @@ app.get('/v1/explorers', (req, res) => {
 });
 //Endpoint get->Reegresar informacion 
 
-app.get('/v1/explorers.:id', (req, res) => {
+app.get('/v1/explorers/:id', (req, res) => {
     console.log(`Api Explorers GET request ${new Date()}`)
     console.log(`Getting explorer with id ${req.params.id}`)
 
-    const explorer = { id: 1, name: "Nelly" }
-    res.status(200).json(explorer)
+    const explorer1 = { id: 1, name: "Nelly" }
+    res.status(200).json(explorer1)
+});
+
+//POST ENDPOINT
+app.post('/v1/explorers', (req, res) => {
+    console.log(`Api Explorers POST request ${new Date()}`)
+    const requestBody = req.body;
+    res.status(201).json({ message: "Created" })
 })
+
 
 // Con esto inicializamos esta app
 app.listen(port, () => {
